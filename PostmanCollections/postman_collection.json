@@ -46,7 +46,7 @@
               }
             }
           ],
-          "_postman_id": "8f572997-59dc-4d25-8eba-e8652ebbc7b3",
+          "id": "8f572997-59dc-4d25-8eba-e8652ebbc7b3",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -144,7 +144,7 @@
               }
             }
           ],
-          "_postman_id": "d04c746b-7610-43f7-aecd-de34b39611f3",
+          "id": "d04c746b-7610-43f7-aecd-de34b39611f3",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -165,7 +165,7 @@
           "response": []
         }
       ],
-      "_postman_id": "e8488d6d-5613-4871-8323-8c7c81a965ed",
+      "id": "e8488d6d-5613-4871-8323-8c7c81a965ed",
       "auth": {
         "type": "bearer",
         "bearer": {
@@ -200,7 +200,7 @@
       "item": [
         {
           "name": "Get events",
-          "_postman_id": "ca2f1a13-9233-49ee-a18b-f774fb1dc87c",
+          "id": "ca2f1a13-9233-49ee-a18b-f774fb1dc87c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -220,11 +220,11 @@
                 {
                   "id": "d69db84e-6d67-429c-8af8-e42b477f414c",
                   "key": "verificationId",
-                  "value": null,
-                  "type": "any"
+                  "value": null
                 }
               ]
-            }
+            },
+            "description": "Events  \n\\- An event is created whenever an verification step is performed or any change to the verification data is done"
           },
           "response": [
             {
@@ -300,7 +300,7 @@
           ]
         }
       ],
-      "_postman_id": "6624d25f-642e-4be4-b51f-2c05342fcece"
+      "id": "6624d25f-642e-4be4-b51f-2c05342fcece"
     },
     {
       "name": "Verifications",
@@ -310,7 +310,7 @@
           "item": [
             {
               "name": "Do front ocr",
-              "_postman_id": "86a33f1f-b7f9-46aa-a4bb-f8e564d57e8e",
+              "id": "86a33f1f-b7f9-46aa-a4bb-f8e564d57e8e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -330,8 +330,7 @@
                       "value": "1",
                       "type": "text"
                     }
-                  ],
-                  "options": {}
+                  ]
                 },
                 "url": {
                   "raw": "{{local}}/verifications/:verificationId/frontIdCards",
@@ -347,8 +346,7 @@
                     {
                       "id": "a4f0b55d-4c79-4c43-a784-74ec34d173cc",
                       "key": "verificationId",
-                      "value": "2b158a5d-a9ee-470d-90d5-ac3506be491b",
-                      "type": "string"
+                      "value": "2b158a5d-a9ee-470d-90d5-ac3506be491b"
                     }
                   ]
                 }
@@ -428,7 +426,7 @@
             },
             {
               "name": "Get frontId OCR result",
-              "_postman_id": "7e98d866-1a65-40f4-b8f2-5ac357823f20",
+              "id": "7e98d866-1a65-40f4-b8f2-5ac357823f20",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -449,8 +447,7 @@
                     {
                       "id": "2b332229-9e2f-4d9a-9102-a59f1cd48eba",
                       "key": "verificationId",
-                      "value": "2b158a5d-a9ee-470d-90d5-ac3506be491b",
-                      "type": "string"
+                      "value": "2b158a5d-a9ee-470d-90d5-ac3506be491b"
                     }
                   ]
                 }
@@ -530,15 +527,14 @@
               ]
             }
           ],
-          "_postman_id": "5c330397-ae96-4cd8-9cfc-43bf5529a34d",
-          "_postman_isSubFolder": true
+          "id": "5c330397-ae96-4cd8-9cfc-43bf5529a34d"
         },
         {
           "name": "Back id",
           "item": [
             {
               "name": "Do back ocr",
-              "_postman_id": "c5260ee7-1fbf-4e37-a75c-5093e782026b",
+              "id": "c5260ee7-1fbf-4e37-a75c-5093e782026b",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -553,8 +549,7 @@
                       "type": "file",
                       "src": "/Users/admin/Downloads/ID Card/benz/back.jpg"
                     }
-                  ],
-                  "options": {}
+                  ]
                 },
                 "url": {
                   "raw": "{{local}}/verifications/:verificationId/backIdCards",
@@ -570,8 +565,7 @@
                     {
                       "id": "ac7e426a-2cb0-4bbf-8067-301681f10abe",
                       "key": "verificationId",
-                      "value": null,
-                      "type": "any"
+                      "value": null
                     }
                   ]
                 }
@@ -580,7 +574,7 @@
             },
             {
               "name": "Get Back OCR results",
-              "_postman_id": "aef2fc73-c3db-4ac0-ac4c-3b75b891ffe0",
+              "id": "aef2fc73-c3db-4ac0-ac4c-3b75b891ffe0",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -601,8 +595,7 @@
                     {
                       "id": "cdfab4b2-a1e7-4ae4-b2ed-a29f687785da",
                       "key": "verificationId",
-                      "value": null,
-                      "type": "any"
+                      "value": null
                     }
                   ]
                 }
@@ -610,15 +603,14 @@
               "response": []
             }
           ],
-          "_postman_id": "b5f139f9-10f0-44ba-bb9c-4e25affa8865",
-          "_postman_isSubFolder": true
+          "id": "b5f139f9-10f0-44ba-bb9c-4e25affa8865"
         },
         {
           "name": "Dopa",
           "item": [
             {
               "name": "Get Dopa results",
-              "_postman_id": "57f070a7-85d9-40ff-80e4-7a0ebdd63e32",
+              "id": "57f070a7-85d9-40ff-80e4-7a0ebdd63e32",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -630,15 +622,14 @@
               "response": []
             }
           ],
-          "_postman_id": "1bd23bf4-e2b6-4991-9f88-a7d5748d04d1",
-          "_postman_isSubFolder": true
+          "id": "1bd23bf4-e2b6-4991-9f88-a7d5748d04d1"
         },
         {
           "name": "Face recogonition",
           "item": [
             {
               "name": "Get face recogonition results",
-              "_postman_id": "f22dd073-1521-4a31-bad7-9adf29f8bba3",
+              "id": "f22dd073-1521-4a31-bad7-9adf29f8bba3",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -659,8 +650,7 @@
                     {
                       "id": "26875c24-6986-46cc-be88-682040712fe4",
                       "key": "verificationId",
-                      "value": null,
-                      "type": "any"
+                      "value": null
                     }
                   ]
                 }
@@ -669,7 +659,7 @@
             },
             {
               "name": "Get face recogonition results Copy",
-              "_postman_id": "eaee83bb-b025-45a8-a703-58276292cc3e",
+              "id": "eaee83bb-b025-45a8-a703-58276292cc3e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -684,8 +674,7 @@
                       "type": "file",
                       "value": null
                     }
-                  ],
-                  "options": {}
+                  ]
                 },
                 "url": {
                   "raw": "{{local}}/verifications/:verificationId/faceRecognition",
@@ -701,8 +690,7 @@
                     {
                       "id": "c56772ee-cd22-43b8-b472-88ccc8f1a072",
                       "key": "verificationId",
-                      "value": null,
-                      "type": "any"
+                      "value": null
                     }
                   ]
                 }
@@ -710,15 +698,14 @@
               "response": []
             }
           ],
-          "_postman_id": "393bb48e-e349-4395-a013-a3ab423ffa6a",
-          "_postman_isSubFolder": true
+          "id": "393bb48e-e349-4395-a013-a3ab423ffa6a"
         },
         {
           "name": "Notify",
           "item": [
             {
               "name": "Send notification",
-              "_postman_id": "351fd69c-f61f-4f08-b296-838a56b6ab80",
+              "id": "351fd69c-f61f-4f08-b296-838a56b6ab80",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -739,8 +726,7 @@
                     {
                       "id": "d7c501a0-50ed-4232-96ff-523032e1acf5",
                       "key": "verificationId",
-                      "value": null,
-                      "type": "any"
+                      "value": null
                     }
                   ]
                 }
@@ -749,7 +735,7 @@
             },
             {
               "name": "Send sms",
-              "_postman_id": "42e3f393-9164-460a-a0a5-76401bed9c30",
+              "id": "42e3f393-9164-460a-a0a5-76401bed9c30",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -771,8 +757,7 @@
                     {
                       "id": "ef8ce0e0-b5a5-4aac-86c3-2c8d2a4ce32a",
                       "key": "verificationId",
-                      "value": null,
-                      "type": "any"
+                      "value": null
                     }
                   ]
                 }
@@ -780,12 +765,11 @@
               "response": []
             }
           ],
-          "_postman_id": "aad65ae2-a193-4123-8b4e-6cdf6ead3859",
-          "_postman_isSubFolder": true
+          "id": "aad65ae2-a193-4123-8b4e-6cdf6ead3859"
         },
         {
           "name": "List",
-          "_postman_id": "bb60f114-85b6-4356-b52f-8e29970a7231",
+          "id": "bb60f114-85b6-4356-b52f-8e29970a7231",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -858,7 +842,7 @@
         },
         {
           "name": "Get by id",
-          "_postman_id": "a37720a6-bed8-4a24-b085-f6f3ee10892d",
+          "id": "a37720a6-bed8-4a24-b085-f6f3ee10892d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -878,8 +862,7 @@
                 {
                   "id": "e0b8a90b-2fc3-4329-adbe-96c3c9849b26",
                   "key": "id",
-                  "value": "7fe4f8f6-ecaf-4823-829b-153cec72bd0d",
-                  "type": "string"
+                  "value": "7fe4f8f6-ecaf-4823-829b-153cec72bd0d"
                 }
               ]
             }
@@ -965,7 +948,7 @@
         },
         {
           "name": "Create new",
-          "_postman_id": "5ca456c7-00b0-49c4-9601-c3fa58837bc9",
+          "id": "5ca456c7-00b0-49c4-9601-c3fa58837bc9",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1064,7 +1047,7 @@
               }
             }
           ],
-          "_postman_id": "8671fef5-549c-45aa-94a6-67bcf874867a",
+          "id": "8671fef5-549c-45aa-94a6-67bcf874867a",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1093,8 +1076,7 @@
                 {
                   "id": "f681a630-327a-459a-bd76-09a00024f617",
                   "key": "verificationId",
-                  "value": "ef539fc8-3339-4e06-aca6-ec2a96d6163e",
-                  "type": "string"
+                  "value": "ef539fc8-3339-4e06-aca6-ec2a96d6163e"
                 }
               ]
             }
@@ -1182,7 +1164,7 @@
           ]
         }
       ],
-      "_postman_id": "ca5c557e-c00d-4ae2-b113-155533370baa",
+      "id": "ca5c557e-c00d-4ae2-b113-155533370baa",
       "event": [
         {
           "listen": "prerequest",
