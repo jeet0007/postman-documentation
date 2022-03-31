@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "ea497c4a-aa16-438b-a06b-abddbb856d55",
+        "_postman_id": "53666312-4192-4c1e-9ec6-6738cfe271e3",
         "name": "case-keeper-documentation",
         "description": "Case keeper is a Directus application. The sole purpose is to manage the cases related to doing the EKYC process.\n\nMain features : \n- Create case\n- Get Verification status\n- Manage business login\n- Get the latest updated information from Mac-KYC-core regarding the verification",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -14,7 +14,6 @@
                     "item": [
                         {
                             "name": "Get all cases",
-                            "id": "a335a5ca-4fb4-4d19-b33f-8dd3359b63cb",
                             "request": {
                                 "method": "GET",
                                 "header": [
@@ -37,7 +36,6 @@
                             },
                             "response": [
                                 {
-                                    "id": "f3e7e689-9e5b-4e2a-b15e-cbdc853d760c",
                                     "name": "OK",
                                     "originalRequest": {
                                         "method": "GET",
@@ -165,14 +163,12 @@
                                         }
                                     ],
                                     "cookie": [],
-                                    "responseTime": null,
                                     "body": "{\n  \"data\": [\n    {\n      \"id\": \"$guid\",\n      \"user_created\": \"$randomUUID\",\n      \"date_created\": \"$isoTimestamp\",\n      \"user_updated\": \"$randomUUID\",\n      \"date_updated\": \"$isoTimestamp\",\n      \"remark\": null,\n      \"claim_type\": \"Accident\",\n      \"first_name\": \"$randomFirstName\",\n      \"last_name\": \"$randomLastName\",\n      \"phone_number\": \"$randomPhoneNumber\",\n      \"email\": \"$randomEmail\",\n      \"verification_cache\": {\n        \"id\": \"$randomUUID\",\n        \"ref\": null,\n        \"status\": \"in_progress\",\n        \"notifyType\": \"sms\",\n        \"createdAt\": \"$isoTimestamp\",\n        \"expiresAt\": \"$isoTimestamp\",\n        \"notifiesAt\": \"$isoTimestamp\",\n        \"frontIdCardConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"backIdCardConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"idFaceRecognitionConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"vaccinePassportConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"amloConfig\": {\n          \"required\": false,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"dopaConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        }\n      }\n    }\n  ]\n}"
                                 }
                             ]
                         },
                         {
                             "name": "Create new case",
-                            "id": "5edfa35d-94cd-422a-af81-05b3ed143a0c",
                             "protocolProfileBehavior": {
                                 "disableBodyPruning": true
                             },
@@ -190,7 +186,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n  \"frontIdCard\": \"true\",\n  \"backIdCard\": \"true\",\n  \"idFaceRecognition\": \"true\",\n  \"vaccinePassport\": \"true\",\n  \"amlo\": \"true\",\n  \"dopa\": \"true\",\n  \"claimType\": \"payer\"\n}",
+                                    "raw": "",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -211,7 +207,6 @@
                             },
                             "response": [
                                 {
-                                    "id": "8ebce461-fd72-4a30-adf8-eff7547b0c35",
                                     "name": "Successful response",
                                     "originalRequest": {
                                         "method": "POST",
@@ -252,14 +247,12 @@
                                         }
                                     ],
                                     "cookie": [],
-                                    "responseTime": null,
                                     "body": "\"\""
                                 }
                             ]
                         },
                         {
                             "name": "Get case by id",
-                            "id": "899878f2-93e6-491a-9cf2-22cd93d2c97e",
                             "request": {
                                 "method": "GET",
                                 "header": [
@@ -280,7 +273,6 @@
                                     ],
                                     "variable": [
                                         {
-                                            "id": "192551fa-3ebe-412a-a397-a1db5e7d1561",
                                             "key": "id",
                                             "value": "7a47ce72-c73b-4a53-a803-cfe41732a72f",
                                             "description": "(Required) REQUIRED: verificationId can get after case has been created."
@@ -290,7 +282,6 @@
                             },
                             "response": [
                                 {
-                                    "id": "7a042d2d-81e6-431b-a0dc-e3e258b8f7e0",
                                     "name": "Successful response",
                                     "originalRequest": {
                                         "method": "GET",
@@ -330,17 +321,14 @@
                                         }
                                     ],
                                     "cookie": [],
-                                    "responseTime": null,
                                     "body": "\"\""
                                 }
                             ]
                         }
-                    ],
-                    "id": "eea8d8b1-65d9-4492-9f63-196d3221369c"
+                    ]
                 },
                 {
                     "name": "Create new",
-                    "id": "05b69be1-e7ba-481c-bc4a-054dd414c4f9",
                     "protocolProfileBehavior": {
                         "disableBodyPruning": true
                     },
@@ -358,7 +346,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"remark\": \"Some case\",\n  \"room_id\": \"ABDOIJG\",\n  \"case_type\": \"Juvenile\",\n  \"client_config_id\": \"b6a17d85-e3d5-44f9-855a-4db57e98e93e\",\n  \"attach_meeting_room\": false\n}",
+                            "raw": "",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -378,7 +366,6 @@
                     },
                     "response": [
                         {
-                            "id": "39a1f0c2-993c-4e36-985f-f793b9146d64",
                             "name": "Successful response",
                             "originalRequest": {
                                 "method": "POST",
@@ -423,17 +410,14 @@
                                 }
                             ],
                             "cookie": [],
-                            "responseTime": null,
                             "body": "\"\""
                         }
                     ]
                 }
-            ],
-            "id": "4b306878-8d0f-4d59-8df6-f75996bdfd5e"
+            ]
         },
         {
             "name": "SSO Auth",
-            "id": "66f1190c-1e69-4601-b701-47071f91a305",
             "request": {
                 "method": "GET",
                 "header": [
@@ -454,7 +438,6 @@
                     ],
                     "variable": [
                         {
-                            "id": "0d092e48-af53-4baa-8695-e83644f7d5e3",
                             "key": "provider",
                             "value": "mac_portal",
                             "description": "(Required) "
@@ -464,7 +447,6 @@
             },
             "response": [
                 {
-                    "id": "a476bf98-5a92-47ce-acbd-4db0167fc5ea",
                     "name": "Successful response",
                     "originalRequest": {
                         "method": "GET",
@@ -504,7 +486,6 @@
                         }
                     ],
                     "cookie": [],
-                    "responseTime": null,
                     "body": "\"\""
                 }
             ]
@@ -522,7 +503,6 @@
     },
     "variable": [
         {
-            "id": "90e9fd96-1672-41e3-9f8b-f7cf61ff11e7",
             "key": "baseUrl",
             "value": "{{base_path}}",
             "type": "string"
