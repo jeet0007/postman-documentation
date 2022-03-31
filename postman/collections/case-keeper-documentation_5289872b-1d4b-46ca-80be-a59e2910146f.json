@@ -1,0 +1,531 @@
+{
+    "info": {
+        "_postman_id": "ea497c4a-aa16-438b-a06b-abddbb856d55",
+        "name": "case-keeper-documentation",
+        "description": "Case keeper is a Directus application. The sole purpose is to manage the cases related to doing the EKYC process.\n\nMain features : \n- Create case\n- Get Verification status\n- Manage business login\n- Get the latest updated information from Mac-KYC-core regarding the verification",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "items",
+            "item": [
+                {
+                    "name": "spaghetti case",
+                    "item": [
+                        {
+                            "name": "Get all cases",
+                            "id": "a335a5ca-4fb4-4d19-b33f-8dd3359b63cb",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/items/spaghetti_case",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "items",
+                                        "spaghetti_case"
+                                    ]
+                                },
+                                "description": "Get all cases returns all the cases that you can access. The level of access depends on the token or SSO used to call the API"
+                            },
+                            "response": [
+                                {
+                                    "id": "f3e7e689-9e5b-4e2a-b15e-cbdc853d760c",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: bearer",
+                                                "key": "Authorization",
+                                                "value": "Bearer <token>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/items/spaghetti_case",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "items",
+                                                "spaghetti_case"
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "disabled": false,
+                                            "key": "Date",
+                                            "value": "Tue, 22 Mar 2022 09:21:39 GMT",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Content-Length",
+                                            "value": "-22266268",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Connection",
+                                            "value": "keep-alive",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Access-Control-Allow-Credentials",
+                                            "value": "true",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Access-Control-Expose-Headers",
+                                            "value": "Content-Range",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Cache-Control",
+                                            "value": "no-cache",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Content-Security-Policy",
+                                            "value": "script-src 'self' 'unsafe-eval';worker-src 'self' blob:;child-src 'self' blob:;img-src 'self' data: blob:;connect-src 'self' https://*;default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Etag",
+                                            "value": "W/\"8d7c1-TLA9+lr5ayEx4CP+37fCr4fHp1k\"",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Strict-Transport-Security",
+                                            "value": "max-age=315360000; includeSubDomains; preload",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "Vary",
+                                            "value": "Origin, Cache-Control",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "X-Powered-By",
+                                            "value": "Directus",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "X-Xss-Protection",
+                                            "value": "1; mode=block",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "x-correlation-id",
+                                            "value": "01109f8e-5541-42a0-807e-a406f2a5a6fe#390377",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "X-Kong-Upstream-Latency",
+                                            "value": "-55717081",
+                                            "description": ""
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "key": "X-Kong-Proxy-Latency",
+                                            "value": "51400507",
+                                            "description": ""
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"data\": [\n    {\n      \"id\": \"$guid\",\n      \"user_created\": \"$randomUUID\",\n      \"date_created\": \"$isoTimestamp\",\n      \"user_updated\": \"$randomUUID\",\n      \"date_updated\": \"$isoTimestamp\",\n      \"remark\": null,\n      \"claim_type\": \"Accident\",\n      \"first_name\": \"$randomFirstName\",\n      \"last_name\": \"$randomLastName\",\n      \"phone_number\": \"$randomPhoneNumber\",\n      \"email\": \"$randomEmail\",\n      \"verification_cache\": {\n        \"id\": \"$randomUUID\",\n        \"ref\": null,\n        \"status\": \"in_progress\",\n        \"notifyType\": \"sms\",\n        \"createdAt\": \"$isoTimestamp\",\n        \"expiresAt\": \"$isoTimestamp\",\n        \"notifiesAt\": \"$isoTimestamp\",\n        \"frontIdCardConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"backIdCardConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"idFaceRecognitionConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"vaccinePassportConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"amloConfig\": {\n          \"required\": false,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        },\n        \"dopaConfig\": {\n          \"required\": true,\n          \"isEditable\": true,\n          \"threshHold\": 0.8,\n          \"checkLiveliness\": true\n        }\n      }\n    }\n  ]\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Create new case",
+                            "id": "5edfa35d-94cd-422a-af81-05b3ed143a0c",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"frontIdCard\": \"true\",\n  \"backIdCard\": \"true\",\n  \"idFaceRecognition\": \"true\",\n  \"vaccinePassport\": \"true\",\n  \"amlo\": \"true\",\n  \"dopa\": \"true\",\n  \"claimType\": \"payer\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/items/spaghetti_case",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "items",
+                                        "spaghetti_case"
+                                    ]
+                                },
+                                "description": "Create new case  \nWhen a new case gets created with the SSO login. The directus will check who is logged in and based on the provider. And get the client config that matches the provider and get all the defaults configs required to create the case eg:\n\n*   notifyAt : When to notify the client\n*   expireAt : How many days to expire case after being created  \n    Request Body\n    \n\n| **field** | **status** | **type** | **description** |\n| --- | --- | --- | --- |\n| firstName |  |  |  |\n| lastName |  |  |  |\n| phoneNumber | Optional | string | Needed if sms is the default notify type |\n| email | Optional | string | Needed if email is the default notify type |\n| frontIdCard | Optional | boolean |  |\n| backIdCard | Optional | boolean |  |\n| idFaceRecognition | Optional | boolean |  |\n| vaccinePassport | Optional | boolean |  |\n| amlo | Optional | boolean |  |\n| dopa | Optional | boolean |  |\n| claimType | Optional | string |  |"
+                            },
+                            "response": [
+                                {
+                                    "id": "8ebce461-fd72-4a30-adf8-eff7547b0c35",
+                                    "name": "Successful response",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: bearer",
+                                                "key": "Authorization",
+                                                "value": "Bearer <token>"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"frontIdCard\": \"true\",\n  \"backIdCard\": \"true\",\n  \"idFaceRecognition\": \"true\",\n  \"vaccinePassport\": \"true\",\n  \"amlo\": \"true\",\n  \"dopa\": \"true\",\n  \"claimType\": \"payer\"\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/items/spaghetti_case",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "items",
+                                                "spaghetti_case"
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "\"\""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Get case by id",
+                            "id": "899878f2-93e6-491a-9cf2-22cd93d2c97e",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/items/spaghetti_case/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "items",
+                                        "spaghetti_case",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "192551fa-3ebe-412a-a397-a1db5e7d1561",
+                                            "key": "id",
+                                            "value": "7a47ce72-c73b-4a53-a803-cfe41732a72f",
+                                            "description": "(Required) REQUIRED: verificationId can get after case has been created."
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "7a042d2d-81e6-431b-a0dc-e3e258b8f7e0",
+                                    "name": "Successful response",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: bearer",
+                                                "key": "Authorization",
+                                                "value": "Bearer <token>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/items/spaghetti_case/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "items",
+                                                "spaghetti_case",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "7a47ce72-c73b-4a53-a803-cfe41732a72f",
+                                                    "description": "(Required) REQUIRED: verificationId can get after case has been created."
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "\"\""
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "eea8d8b1-65d9-4492-9f63-196d3221369c"
+                },
+                {
+                    "name": "Create new",
+                    "id": "05b69be1-e7ba-481c-bc4a-054dd414c4f9",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"remark\": \"Some case\",\n  \"room_id\": \"ABDOIJG\",\n  \"case_type\": \"Juvenile\",\n  \"client_config_id\": \"b6a17d85-e3d5-44f9-855a-4db57e98e93e\",\n  \"attach_meeting_room\": false\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/items/case",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "items",
+                                "case"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "39a1f0c2-993c-4e36-985f-f793b9146d64",
+                            "name": "Successful response",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: bearer",
+                                        "key": "Authorization",
+                                        "value": "Bearer <token>"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIyZTMxNzVjLThmZWItNDQ3MS04NmQ5LTY1NGIwNDJlOThkOCIsInJvbGUiOiI1YzRkNmMzNy02MzlmLTRhNzQtOWU5Yi02NTEyNDNkYWRkYmQiLCJhcHBfYWNjZXNzIjp0cnVlLCJhZG1pbl9hY2Nlc3MiOnRydWUsImlhdCI6MTY0ODAzNDUyOSwiZXhwIjoxNjQ5MzMwNTI5LCJpc3MiOiJkaXJlY3R1cyJ9.dYuLZnWAqCSB963ThEow1bdclN7Is0BvYf38NFRyNUQ"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"remark\": \"Some case\",\n  \"room_id\": \"ABDOIJG\",\n  \"case_type\": \"Juvenile\",\n  \"client_config_id\": \"b6a17d85-e3d5-44f9-855a-4db57e98e93e\",\n  \"attach_meeting_room\": false\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/items/case",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "items",
+                                        "case"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "\"\""
+                        }
+                    ]
+                }
+            ],
+            "id": "4b306878-8d0f-4d59-8df6-f75996bdfd5e"
+        },
+        {
+            "name": "SSO Auth",
+            "id": "66f1190c-1e69-4601-b701-47071f91a305",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/auth/login/:provider",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "auth",
+                        "login",
+                        ":provider"
+                    ],
+                    "variable": [
+                        {
+                            "id": "0d092e48-af53-4baa-8695-e83644f7d5e3",
+                            "key": "provider",
+                            "value": "mac_portal",
+                            "description": "(Required) "
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "a476bf98-5a92-47ce-acbd-4db0167fc5ea",
+                    "name": "Successful response",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/auth/login/:provider",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "login",
+                                ":provider"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "provider",
+                                    "value": "mac_portal",
+                                    "description": "(Required) "
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "\"\""
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "value": "<Bearer Token>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "90e9fd96-1672-41e3-9f8b-f7cf61ff11e7",
+            "key": "baseUrl",
+            "value": "{{base_path}}",
+            "type": "string"
+        }
+    ]
+}
