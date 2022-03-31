@@ -1,0 +1,301 @@
+openapi: 3.0.0
+info:
+  title: Case-keeper
+  description: >-
+    Case keeper is a Directus application. The sole purpose is to manage the
+    cases related to doing the EKYC process.
+
+
+    Main features : 
+
+    - Create case
+
+    - Get Verification status
+
+    - Manage business login
+
+    - Get the latest updated information from Mac-KYC-core regarding the
+    verification
+  version: 1.0.0
+servers:
+  - url: http://{{base_path}}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
+tags:
+  - name: Case
+  - name: Auth
+paths:
+  /items/case:
+    post:
+      tags:
+        - Case
+      summary: Create new
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                remark: Some case
+                room_id: ABDOIJG
+                case_type: Juvenile
+                client_config_id: b6a17d85-e3d5-44f9-855a-4db57e98e93e
+                attach_meeting_room: false
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIyZTMxNzVjLThmZWItNDQ3MS04NmQ5LTY1NGIwNDJlOThkOCIsInJvbGUiOiI1YzRkNmMzNy02MzlmLTRhNzQtOWU5Yi02NTEyNDNkYWRkYmQiLCJhcHBfYWNjZXNzIjp0cnVlLCJhZG1pbl9hY2Nlc3MiOnRydWUsImlhdCI6MTY0ODAzNDUyOSwiZXhwIjoxNjQ5MzMwNTI5LCJpc3MiOiJkaXJlY3R1cyJ9.dYuLZnWAqCSB963ThEow1bdclN7Is0BvYf38NFRyNUQ
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /auth/login/{provider}:
+    get:
+      tags:
+        - Auth
+      summary: SSO Auth
+      parameters:
+        - name: provider
+          in: path
+          schema:
+            type: string
+          required: true
+          example: mac_portal
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /items/spaghetti_case:
+    get:
+      tags:
+        - default
+      summary: Get all cases
+      description: >-
+        Get all cases returns all the cases that you can access. The level of
+        access depends on the token or SSO used to call the API
+      responses:
+        '200':
+          description: OK
+          headers:
+            Date:
+              schema:
+                type: string
+                example: Tue, 22 Mar 2022 09:21:39 GMT
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '579521'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Access-Control-Allow-Credentials:
+              schema:
+                type: boolean
+                example: 'true'
+            Access-Control-Expose-Headers:
+              schema:
+                type: string
+                example: Content-Range
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: >-
+                  script-src 'self' 'unsafe-eval';worker-src 'self'
+                  blob:;child-src 'self' blob:;img-src 'self' data:
+                  blob:;connect-src 'self' https://*;default-src 'self';base-uri
+                  'self';block-all-mixed-content;font-src 'self' https:
+                  data:;frame-ancestors 'self';object-src 'none';script-src-attr
+                  'none';style-src 'self' https: 'unsafe-inline'
+            Etag:
+              schema:
+                type: string
+                example: W/"8d7c1-TLA9+lr5ayEx4CP+37fCr4fHp1k"
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=315360000; includeSubDomains; preload
+            Vary:
+              schema:
+                type: string
+                example: Origin, Cache-Control
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-Powered-By:
+              schema:
+                type: string
+                example: Directus
+            X-Xss-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+            x-correlation-id:
+              schema:
+                type: string
+                example: 01109f8e-5541-42a0-807e-a406f2a5a6fe#390377
+            X-Kong-Upstream-Latency:
+              schema:
+                type: integer
+                example: '267'
+            X-Kong-Proxy-Latency:
+              schema:
+                type: integer
+                example: '0'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  - id: $guid
+                    user_created: $randomUUID
+                    date_created: $isoTimestamp
+                    user_updated: $randomUUID
+                    date_updated: $isoTimestamp
+                    remark: null
+                    claim_type: Accident
+                    first_name: $randomFirstName
+                    last_name: $randomLastName
+                    phone_number: $randomPhoneNumber
+                    email: $randomEmail
+                    verification_cache:
+                      id: $randomUUID
+                      ref: null
+                      status: in_progress
+                      notifyType: sms
+                      createdAt: $isoTimestamp
+                      expiresAt: $isoTimestamp
+                      notifiesAt: $isoTimestamp
+                      frontIdCardConfig:
+                        required: true
+                        isEditable: true
+                        threshHold: 0.8
+                        checkLiveliness: true
+                      backIdCardConfig:
+                        required: true
+                        isEditable: true
+                        threshHold: 0.8
+                        checkLiveliness: true
+                      idFaceRecognitionConfig:
+                        required: true
+                        isEditable: true
+                        threshHold: 0.8
+                        checkLiveliness: true
+                      vaccinePassportConfig:
+                        required: true
+                        isEditable: true
+                        threshHold: 0.8
+                        checkLiveliness: true
+                      amloConfig:
+                        required: false
+                        isEditable: true
+                        threshHold: 0.8
+                        checkLiveliness: true
+                      dopaConfig:
+                        required: true
+                        isEditable: true
+                        threshHold: 0.8
+                        checkLiveliness: true
+    post:
+      tags:
+        - default
+      summary: Create new case
+      description: >-
+        Create new case  
+
+        When a new case gets created with the SSO login. The directus will check
+        who is logged in and based on the provider. And get the client config
+        that matches the provider and get all the defaults configs required to
+        create the case eg:
+
+
+        *   notifyAt : When to notify the client
+
+        *   expireAt : How many days to expire case after being created  
+            Request Body
+            
+
+        | **field** | **status** | **type** | **description** |
+
+        | --- | --- | --- | --- |
+
+        | firstName |  |  |  |
+
+        | lastName |  |  |  |
+
+        | phoneNumber | Optional | string | Needed if sms is the default notify
+        type |
+
+        | email | Optional | string | Needed if email is the default notify type
+        |
+
+        | frontIdCard | Optional | boolean |  |
+
+        | backIdCard | Optional | boolean |  |
+
+        | idFaceRecognition | Optional | boolean |  |
+
+        | vaccinePassport | Optional | boolean |  |
+
+        | amlo | Optional | boolean |  |
+
+        | dopa | Optional | boolean |  |
+
+        | claimType | Optional | string |  |
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                frontIdCard: 'true'
+                backIdCard: 'true'
+                idFaceRecognition: 'true'
+                vaccinePassport: 'true'
+                amlo: 'true'
+                dopa: 'true'
+                claimType: payer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /items/spaghetti_case/{id}:
+    get:
+      tags:
+        - default
+      summary: Get case by id
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: 'REQUIRED: verificationId can get after case has been created.'
+          example: 7a47ce72-c73b-4a53-a803-cfe41732a72f
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
