@@ -13,12 +13,12 @@ info:
     - Get Verification status
 
     - Manage business login
-    
+
     - Get the latest updated information from Mac-KYC-core regarding the
     verification
   version: 1.0.0
 servers:
-  - url: "{{base_path}}"
+  - url: http://{{base_path}}
 components:
   securitySchemes:
     bearerAuth:
@@ -288,6 +288,24 @@ paths:
       summary: Get case by id
       parameters:
         - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+          description: 'REQUIRED: verificationId can get after case has been created.'
+          example: 7a47ce72-c73b-4a53-a803-cfe41732a72f
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /items/case/{uuid}:
+    get:
+      tags:
+        - default
+      summary: Get case by id
+      parameters:
+        - name: uuid
           in: path
           schema:
             type: string
